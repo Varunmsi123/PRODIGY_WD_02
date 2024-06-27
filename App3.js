@@ -84,22 +84,3 @@ function resetLap(){
     laps.innerHTML = ""
 }
 
-var mixBut = document.querySelector("#startTimer");
-
-mixBut.addEventListener("click", Start);
-
-function Start(){
-    timer = true;
-    run();
-    mixBut.innerText = "Pause";
-    mixBut.removeEventListener("click", Start);
-    mixBut.addEventListener("click", Stop);
-}
-
-function Stop(){
-    timer = false;
-    run();
-    mixBut.innerText = "Play";
-    mixBut.removeEventListener("click", Stop);
-    mixBut.addEventListener("click", Start);
-}
